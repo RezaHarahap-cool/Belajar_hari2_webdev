@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+body{
+    background-color: lightgray;   
+}
+.halaman{
+    padding: 60px;
+    text-align: center;
+    background: gray ;
+    color: whitesmoke;
+}
+
+.navbar{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+}
+
+.navbar a{
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+
+.row{
+    display:flex; 
+    gap: 30px; /* Jarak antar sidebar dan konten utama */
+    padding: 1.4rem 7%; /* Padding di sekitar main content */
+    align-items: flex-start;
+}
+
+.side{
+    flex: 40%;
+    background-color: white;
+    padding :20px;
+    border-radius: 20px;
+}
+.side h2, p{
+    margin-bottom: 5px;
+}
+
+.side img{
+    height: 300px
+}
+
+.cerita{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.social-media {
+    margin-top: 15px;
+}
+.social-media ul {
+    list-style: none; /* Hilangkan bullet */
+    padding: 0;
+    margin: 0;
+}
+.social-media li {
+    margin-bottom: 8px;
+    list-style: none; /* Jarak antar item sosmed */
+}
+.social-media a {
+    display: block; /* Agar link mengisi seluruh lebar li dan padding bekerja */
+    background-color: black;
+    color: white; /* Warna teks link sosmed */
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    transition: background-color 0.3s ease;
+}
+.social-media a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.content{
+    flex: 60%;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.conten_info{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.conten img{
+    width: 100%; /* KUNCI UTAMA: Gambar akan mengisi 100% lebar dari kontainer pembungkusnya (.gambar) */
+    margin-top: 20px; /* KUNCI UTAMA: Tinggi akan menyesuaikan secara otomatis agar aspek rasio gambar tetap terjaga */
+    display: block; /* Opsional, tapi disarankan untuk menghilangkan spasi bawah yang kadang muncul di bawah gambar inline */
+    border-radius: 5px; /* Jika ingin sudut gambar melengkung */
+}
+
+.tombol_info{
+    background-color: black;
+    color: white;
+    padding: 15px 40px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.kaki {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: 20px;
+    font-size: larger;
+}
+.kaki a{
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px){
+    .gambar{
+        width: 100%;
+        height: auto;
+    }
+    .row {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .side {
+        flex: 0 0 auto; 
+        width: 90%; 
+        margin-bottom: 20px; 
+        align-items: center;
+    }
+
+    .conten {
+        flex: 0 0 auto; 
+        width: 90%; 
+    }
+}
